@@ -3,8 +3,8 @@
  */
 const fail = require('./module/export-fail')
 
-fail() // hello world
-console.log(fail.me) // undefined
+fail() // hello
+console.log(fail.word) // undefined
 
 /**
  * 为什么会这样？

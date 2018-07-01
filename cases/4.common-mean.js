@@ -12,7 +12,7 @@ function runner(file) {
 const fail = runner('./module/export-fail.js')
 
 fail()
-console.log(fail.me)
+console.log(`fail.word`, fail.word)
 
 /**
  * fn 到底生成了怎样的函数？
@@ -20,7 +20,7 @@ console.log(fail.me)
  */
 function _fn(module, exports) {
   exports.word = 'hello'
-  module.exports = function () {
+  module.exports = function() {
     console.log(exports.word)
   }
 }
